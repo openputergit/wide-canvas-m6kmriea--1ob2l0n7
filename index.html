@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chemspace Pharmaceuticals - Leading manufacturer and supplier of pharmaceutical chemicals">
+    <meta name="keywords" content="pharmaceuticals, chemicals, custom synthesis, bulk supply, research chemicals">
+    <title>Chemspace Pharmaceuticals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e4b7b 0%, #163553 100%);
+        }
+        .search-animation {
+            transition: all 0.3s ease;
+        }
+        .search-animation:hover {
+            transform: scale(1.02);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="logo1.png" alt="Chemspace Logo" class="h-10">
+                    <span class="text-xl font-bold">Chemspace</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="hover:text-blue-200 transition">Home</a>
+                    <a href="index.html" class="hover:text-blue-200 transition">Products</a>
+                    <a href="admin.html" class="hover:text-blue-200 transition">Admin</a>
+                    <a href="#about" class="hover:text-blue-200 transition">About</a>
+                    <a href="#services" class="hover:text-blue-200 transition">Services</a>
+                    <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="home.html" class="hover:text-blue-200">Home</a>
+                    <a href="index.html" class="hover:text-blue-200">Products</a>
+                    <a href="admin.html" class="hover:text-blue-200">Admin</a>
+                    <a href="#about" class="hover:text-blue-200">About</a>
+                    <a href="#services" class="hover:text-blue-200">Services</a>
+                    <a href="#contact" class="hover:text-blue-200">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Enhanced Search -->
+    <section class="pt-24 pb-12 px-4 gradient-bg text-white">
+        <div class="container mx-auto text-center py-20">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">Welcome to Chemspace Pharmaceuticals</h1>
+            <p class="text-xl mb-8 fade-in">Your trusted partner in pharmaceutical excellence</p>
+            
+            <div class="max-w-2xl mx-auto search-animation">
+                <div class="flex items-center bg-white rounded-lg overflow-hidden p-1">
+                    <input type="text" id="search" placeholder="Search by CAS No or Product Name" 
+                           class="w-full px-4 py-2 text-gray-700 focus:outline-none">
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+                <div id="search-suggestions" class="bg-white mt-2 rounded-lg hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section (New) -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=800" 
+                         alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Chemical Compound A</h3>
+                        <p class="text-gray-600 mb-4">CAS No: 123-45-6</p>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <!-- More product cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced About Section -->
+    <section id="about" class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">About Us</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-gray-600 leading-relaxed">
+                        At Chemspace Pharmaceuticals, we bring over two decades of expertise in pharmaceutical chemical synthesis.
+                        Our state-of-the-art facilities and dedicated research team ensure the highest quality standards in every product.
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="font-semibold mb-2">Key Highlights:</h4>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>ISO 9001:2015 Certified</li>
+                            <li>GMP Compliant Facilities</li>
+                            <li>24/7 Technical Support</li>
+                            <li>Global Distribution Network</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <i class="bi bi-trophy text-4xl text-blue-600"></i>
+                        <h4 class="mt-4 font-semibold">20+ Years Experience</h4>
+                    </div>
+                    <!-- More stat boxes... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Enhanced Form -->
+    <section id="contact" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-xl font-semibold mb-4">Send us a message</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" required
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" required
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" required
+                                      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-xl font-semibold mb-4">Our Location</h3>
+                    <div class="space-y-4">
+                        <p><i class="bi bi-geo-alt text-blue-600"></i> 123 Business Street, Suite 100</p>
+                        <p><i class="bi bi-telephone text-blue-600"></i> +1 (555) 123-4567</p>
+                        <p><i class="bi bi-envelope text-blue-600"></i> info@chemspace.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="logo1.png" alt="Chemspace Logo" class="h-12 mb-4">
+                    <p class="text-sm">Leading the way in pharmaceutical innovation</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="hover:text-blue-200">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-200">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-200">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li>Custom Synthesis</li>
+                        <li>Bulk Supply</li>
+                        <li>Research Support</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-200"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="hover:text-blue-200"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="hover:text-blue-200"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-blue-400 text-center">
+                <p>&copy; 2025 Chemspace Pharmaceuticals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Enhanced Contact Form with Validation
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            alert('Thank you for your message! We will get back to you soon.');
+            e.target.reset();
+        });
+
+        // Enhanced Search Functionality
+        const searchInput = document.getElementById('search');
+        const searchSuggestions = document.getElementById('search-suggestions');
+
+        searchInput.addEventListener('input', (e) => {
+            const value = e.target.value;
+            if (value.length > 2) {
+                // Simulate API call for suggestions
+                searchSuggestions.innerHTML = `
+                    <div class="p-2 hover:bg-gray-100 cursor-pointer">Suggestion 1</div>
+                    <div class="p-2 hover:bg-gray-100 cursor-pointer">Suggestion 2</div>
+                `;
+                searchSuggestions.classList.remove('hidden');
+            } else {
+                searchSuggestions.classList.add('hidden');
+            }
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
